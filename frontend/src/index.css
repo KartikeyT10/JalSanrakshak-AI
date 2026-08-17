@@ -1,0 +1,360 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* JalRakshak AI Design System - Water Harvesting Theme */
+
+@layer base {
+  :root {
+    /* Premium Water-themed color palette */
+    --background: 210 40% 99%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Ocean blue primary palette */
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --primary-light: 221 83% 65%;
+    --primary-dark: 221 83% 40%;
+
+    /* Sophisticated Aqua secondary */
+    --secondary: 188 86% 53%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
+
+    --radius: 1rem;
+
+    /* Custom colors */
+    --water-blue: 221 83% 53%;
+    --water-light: 200 80% 70%;
+    --water-dark: 221 100% 30%;
+    --aqua: 188 86% 53%;
+    --deep-blue: 222 90% 25%;
+    --sky-blue: 210 60% 95%;
+
+    /* Gradients */
+    --gradient-water: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--aqua)));
+    --gradient-ocean: linear-gradient(180deg, hsl(var(--primary-light)), hsl(var(--primary-dark)));
+    --gradient-sky: linear-gradient(180deg, hsl(var(--sky-blue)), hsl(var(--background)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--aqua)) 50%, hsl(var(--water-light)) 100%);
+
+    /* Shadows */
+    --shadow-water: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+    --shadow-soft: 0 8px 30px -4px hsl(var(--foreground) / 0.05);
+    --shadow-glow: 0 0 30px hsl(var(--aqua) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 188 86% 53%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+
+    --water-blue: 217.2 91.2% 59.8%;
+    --water-light: 200 80% 60%;
+    --water-dark: 221 100% 40%;
+    --aqua: 188 86% 45%;
+    --deep-blue: 222 90% 35%;
+    --sky-blue: 210 60% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* ============================
+     HERO GRADIENT - Dark Navy
+     ============================ */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #1e40af 100%);
+  }
+
+  /* ============================
+     CTA GRADIENT - Dark Navy  
+     ============================ */
+  .cta-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #172554 100%);
+  }
+
+  /* ============================
+     GLASS CARD
+     ============================ */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 1.25rem;
+    box-shadow: 
+      0 1px 3px rgba(0, 0, 0, 0.04),
+      0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .glass-card:hover {
+    box-shadow: 
+      0 4px 6px rgba(0, 0, 0, 0.04),
+      0 12px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  /* ============================
+     FEATURE CARD
+     ============================ */
+  .feature-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .feature-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Water animations */
+  .water-drop {
+    @apply animate-bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  .wave-animation {
+    background: linear-gradient(-45deg, 
+      hsl(var(--water-blue)), 
+      hsl(var(--aqua)), 
+      hsl(var(--water-light)), 
+      hsl(var(--primary)));
+    background-size: 400% 400%;
+    animation: wave 8s ease-in-out infinite;
+  }
+
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple-effect::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: hsl(var(--aqua) / 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .ripple-effect:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Water fill animation */
+  .water-fill {
+    background: var(--gradient-ocean);
+    border-radius: 0 0 50% 50%;
+    animation: fill 2s ease-out forwards;
+  }
+
+  /* Fade in up animation */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+}
+
+/* ============================
+   KEYFRAMES
+   ============================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fill {
+  from {
+    height: 0%;
+  }
+  to {
+    height: var(--fill-height, 50%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes droplet {
+  0% {
+    transform: translateY(-20px) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes rain-fall {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes water-rise {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes bubble-up {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes leaf-grow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
