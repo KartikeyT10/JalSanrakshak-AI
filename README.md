@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Hackathon](https://img.shields.io/badge/SIH-2026%20%7C%20SIH25065-purple.svg)](https://www.sih.gov.in/)
 
-**JalSanrakshak AI** is an intelligent, AI-powered decision-support platform designed for real-time assessment of rooftop rainwater harvesting (RTRWH) and artificial groundwater recharge feasibility. Built for **Smart India Hackathon 2025**, it bridges satellite imagery, meteorological datasets, geological hydro-models, and machine learning into actionable, engineered harvesting roadmaps.
+**JalSanrakshak AI** is an intelligent, AI-powered decision-support platform designed for real-time assessment of rooftop rainwater harvesting (RTRWH) and artificial groundwater recharge feasibility. Built for **Smart India Hackathon 2026**, it bridges satellite imagery, meteorological datasets, geological hydro-models, and machine learning into actionable, engineered harvesting roadmaps.
 
 ---
 
