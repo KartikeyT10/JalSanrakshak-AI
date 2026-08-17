@@ -150,7 +150,7 @@ Open your browser at: `http://localhost:8080` (or `http://localhost:5173`)
 
 ---
 
-## 👥 Varun Ventures Team
+## 👥 Waymakers Team
 - **Smart India Hackathon 2026**
 - **Problem Statement ID**: SIH25065 (Smart Automation)
 
